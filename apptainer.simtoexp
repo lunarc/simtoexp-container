@@ -12,6 +12,8 @@ From: ubuntu:22.04
   apt-get install -y git && \
   apt-get clean 
 
+  strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
+
   mkdir -p /install && cd /install
   git clone https://github.com/jonaslindemann/SimToExp-2.0
   cd SimToExp-2.0

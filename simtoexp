@@ -1,0 +1,3 @@
+xhost local:$USER &>/dev/null
+singularity run --bind /lunarc:/lunarc,/projects:/projects simtoexp.sif $@
+xhost - local:$USER &>/dev/null
